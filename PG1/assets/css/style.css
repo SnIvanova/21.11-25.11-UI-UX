@@ -259,6 +259,11 @@ footer a {
         height: 3.5rem;
         font-size: 1rem;
     }
+    /* FOOTER */
+    footer address{
+        width: 70%;
+        display: inline-table;
+    }
 
   }
   
