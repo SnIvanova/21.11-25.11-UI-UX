@@ -379,7 +379,8 @@ footer a {
 
     nav,
     footer,
-    aside {
+    aside,
+    section{
         display: none;
     }
 
