@@ -315,8 +315,6 @@ footer a {
 
   
     /* ELEMENTI NEL MAIN - ARTICLE */
-    main article {
-    }
     main .article-author {
       font-size: 1rem;
     }
@@ -324,7 +322,7 @@ footer a {
       width: 4rem;
     }
     main article {
-      font-size: 1.05rem;
+      font-size: 2.2rem;
     }
     main article b {
       font-size: 1.2rem;
@@ -351,8 +349,7 @@ footer a {
     /* FORM */
   
     /* ELEMENTI NELL' ASIDE */
-    aside h2 {
-    }
+
     aside div {
       display: inline-block;
       width: 33%;
@@ -401,7 +398,8 @@ footer a {
         color: black;
         font-weight: bold;
     }
-    strong {
+    strong, a  {
+        text-decoration: none;
         color: black;
     }
 
@@ -423,11 +421,12 @@ footer a {
     }
 
     thead tr {
-        background-color: none;
+        background-color: #d3d3d3;
         color: black;
-        font-style: normal;
-    }
-
-
+      }
+    thead tr,
+    tbody tr {
+        border-bottom: 1px solid #666;
+      }
 
 }
