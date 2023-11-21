@@ -373,28 +373,23 @@ footer a {
         box-shadow: none;
     }
 
-    #logo>img {
-        display: none;
-    }
-
     nav,
-    footer,
-    aside,
-    section{
+    footer, header, .fas,
+    aside, iframe ,
+    section, img{
         display: none;
     }
 
-    #logo>p {
+    main h2 {
+        font-size: 1.3em;
+    }
+    h1 + p {
         font-weight: bold;
         font-size: 1.5em;
         color: black;
-        margin: 0;
-        padding: 0;
     }
 
-    #logos {
-        display: none;
-    }
+
 
     .strong {
         color: black;
@@ -423,28 +418,6 @@ footer a {
         font-style: normal;
     }
 
-    thead tr :last-child {
-        display: none;
-    }
 
-    tbody tr :last-child {
-        display: none;
-    }
-
-    tbody :last-child {
-        display: none;
-    }
-
-    tbody :last-child {
-        display: none;
-    }
-
-    .child {
-        display: none;
-    }
-
-    iframe {
-        display: none;
-    }
 
 }
