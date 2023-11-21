@@ -27,9 +27,12 @@ header div img {
     margin-bottom: 20px;
 }
 header nav ul {
+    display: flex;
     margin: 0;
+    justify-content: center;
 }
 header nav li {
+    padding: 1%;
     list-style: none;
 }
 header nav li a {
@@ -50,6 +53,12 @@ main {
     padding: 2em 1em;
     margin-bottom:1.5em ;
 }
+main article img:nth-of-type(1) {
+    border: 3px solid #00a0c6;
+    outline: 3px solid #a82264;
+    width: 6rem;
+    padding: 3px;
+  }
 section { 
     background-color: #e3e3e3;
     padding: 1em;
@@ -62,6 +71,7 @@ section h2 {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 1em;
+    background-color: #A3A3A3;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
@@ -178,3 +188,174 @@ footer {
 footer a {
     color: fuchsia;
 }
+
+/* * MEDIA */
+
+@media screen and (min-width: 550px) {
+    /* IMPOSTAZIONI GENERALI */
+    body {
+      padding: 1rem;
+    }
+    section h2 {
+      padding: 0.5%;
+      font-size: 1.6rem;
+      text-transform: capitalize;
+    }
+  
+    /* ELEMENTI NEL MAIN - ARTICLE */
+    main article {
+      padding: 0 1rem;
+      margin-top: -1rem;
+      font-size: 1.4rem;
+    }
+    main .article-author {
+      font-size: 1.4rem;
+    }
+    main article img:nth-of-type(1) {
+      width: 5rem;
+    }
+    h1 {
+        width: 70%;
+        font-size: 4.3rem;
+    }
+    p, address, ul, ol, dl, blockquote {
+    margin-bottom: 1.4em;
+    }
+    main h2 {
+        font-weight: bold;
+    }
+    h2 b {
+      font-size: 1.6rem;
+    }
+    iframe {
+      height: 12rem;
+      border-radius: 1.5rem;
+    }
+  
+    /* TABELLE */
+    table {
+      margin: 5em 0 5em 0;
+      margin-inline: auto;
+      width: 75%;
+    }
+    caption {
+      font-size: 1.2rem;
+    }
+    thead tr {
+      font-size: 1.1rem;
+    }
+  
+    /* FORM */
+    input {
+      width: 70%;
+      height: 3.5rem;
+    }
+    input::placeholder {
+      font-size: 1rem;
+      padding-left: 1rem;
+    }
+    button {
+        width: 15%;
+        height: 3.5rem;
+        font-size: 1rem;
+    }
+
+  }
+  
+  @media screen and (min-width: 800px) {
+    body {
+      padding: 1rem 7rem;
+    }
+  
+    /* HEADER */
+    header{
+        padding: 1.% 0 1.% 0
+    }
+
+    header, header > div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.1em;
+    }
+
+    header div img{
+        max-height: 5rem;
+        margin-bottom: 0;
+    }
+
+    header ul > li{
+        padding-right: 3%;
+    }
+
+    nav{
+        width: 30%;
+    }
+
+    nav ul{
+        display: flex;
+        justify-content: end;
+    }
+   header p{
+        margin-top: 1em;
+    }
+  
+    /* MAIN */
+    section {
+      display: inline-block;
+      vertical-align: middle;
+      width: 49%;
+      border-radius: 1rem;
+    }
+
+  
+    /* ELEMENTI NEL MAIN - ARTICLE */
+    main article {
+    }
+    main .article-author {
+      font-size: 1rem;
+    }
+    main article img:nth-of-type(1) {
+      width: 4rem;
+    }
+    main article {
+      font-size: 1.05rem;
+    }
+    main article b {
+      font-size: 1.2rem;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    main h2 {
+        font-weight: bold;
+    }
+    iframe {
+      height: 14rem;
+      display: inline-block;
+      vertical-align: middle;
+      width: 49%;
+      border-radius: 1rem;
+      margin-top: 0.15rem;
+    }
+  
+    /* TABELLE */
+    table {
+      width: 70%;
+    }
+    /* FORM */
+  
+    /* ELEMENTI NELL' ASIDE */
+    aside h2 {
+    }
+    aside div {
+      display: inline-block;
+      width: 33%;
+    }
+
+    /* FOOTER */
+    footer address{
+        width: 70%;
+        display: inline-table;
+    }
+  }
