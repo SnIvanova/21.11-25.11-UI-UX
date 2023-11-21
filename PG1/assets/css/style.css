@@ -371,27 +371,37 @@ footer a {
     header,
     main {
         box-shadow: none;
+        margin: 0;
+        padding: 0;
     }
 
     nav,
-    footer, header, .fas,
+    footer, .fas,
     aside, iframe ,
     section, img{
         display: none;
     }
 
+    body{
+        font-family: 'Times New Roman', Times, serif;
+    }
     main h2 {
         font-size: 1.3em;
+        font-weight: bold;
+
     }
     h1 + p {
+        font-style: italic;
         font-weight: bold;
-        font-size: 1.5em;
+        font-size: 1em;
         color: black;
     }
-
-
-
-    .strong {
+    header p{
+        font-size: 1em;
+        color: black;
+        font-weight: bold;
+    }
+    strong {
         color: black;
     }
 
