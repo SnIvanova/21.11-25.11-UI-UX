@@ -23,7 +23,7 @@ hr {
 a {
   cursor: pointer;
 }
-a:hover {
+a:hover, #calendar-icon:hover{
   filter: brightness(90%);
 }
 
@@ -511,4 +511,46 @@ footer a {
   .floating-icons, img {
     display: none;
   }
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 15em;
+  background-color: rgb(43, 122, 123);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 50%; 
+  right: 100%; 
+  margin-right: 0.2em; 
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-day {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #fff;
+}
+.calendar-day.today {
+  background-color: rgb(0, 255, 145); 
+  color: white;
 }
