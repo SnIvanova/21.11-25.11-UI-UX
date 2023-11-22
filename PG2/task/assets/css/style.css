@@ -61,6 +61,7 @@ a:hover {
   color: #ff5954;
 }
 
+
 @media screen and (min-width: 700px) {
   .floating-icons {
     top: 0;
@@ -246,6 +247,7 @@ h1 + p {
     line-height: 2;
   }
   section {
+    padding: 2.6rem;
     border-radius: 20px;
   }
 }
@@ -471,6 +473,7 @@ footer a {
     margin-right: auto;
   }
 }
+
 
 @media print {
   body {
