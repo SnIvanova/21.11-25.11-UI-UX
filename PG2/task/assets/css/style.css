@@ -558,3 +558,18 @@ footer a {
   background-color: rgb(0, 255, 145); 
   color: white;
 }
+.calendar-day.weekend {
+  background-color: rgb(219, 208, 57); 
+}
+.calendar-day.empty {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .calendar {
+      grid-template-columns: repeat(7, 1fr);
+  }
+  .calendar-day {
+      padding: 5px;
+  }
+}
