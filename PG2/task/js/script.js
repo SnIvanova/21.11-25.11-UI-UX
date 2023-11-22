@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const date = new Date();
     const daysInMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
-
+    const monthNames = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno",
+    "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
+    const currentMonthName = monthNames[date.getMonth()];
     const scrollToTop = () => {
       window.scrollTo({
         top: 0,
@@ -14,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const generateCalendar = () => {
-        let calendarHTML = '<div class="calendar">';
+        let calendarHTML =  `<div class="calendar-month">${currentMonthName}</div><div class="calendar">`;
         const today = new Date().getDate(); 
         for(let i = 1; i <= daysInMonth; i++) {
             const dayClass = i === today ? 'calendar-day today' : 'calendar-day';
