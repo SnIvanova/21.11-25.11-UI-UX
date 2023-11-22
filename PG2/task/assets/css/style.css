@@ -23,6 +23,55 @@ a:hover {
   filter: brightness(90%);
 }
 
+.floating-icons {
+  z-index: 3;
+  font-size: 2rem;
+  position: fixed;
+  bottom: 1rem;
+  right: -0.8rem;
+}
+
+.floating-icons .fa-plus-square {
+  display: block;
+  bottom: 5rem;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  background-color: #ffffff99;
+  border: 3px solid white;
+  color: #4d61ab;
+}
+
+.floating-icons .fa-calendar-alt {
+  display: block;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  background-color: #ffffff99;
+  border: 3px solid white;
+  color: #4d61ab;
+}
+
+.floating-icons .fa-caret-square-up {
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  background-color: #ffffff99;
+  border: 3px solid white;
+  color: #ff5954;
+}
+
+@media screen and (min-width: 700px) {
+  .floating-icons {
+    top: 0;
+    right: -0.6rem;
+  }
+  .floating-icons .fa-caret-square-up {
+    position: fixed;
+    bottom: 1rem;
+    right: -0.8rem;
+  }
+}
 /* HEADER */
 header {
   position: sticky;
@@ -108,6 +157,7 @@ main {
 }
 
 section {
+  position: relative;
   background-color: #e3e3e3;
   padding: 1.5em 1em;
   margin-bottom: 2em;
@@ -115,13 +165,21 @@ section {
 }
 
 section h2 {
+  position: absolute;
+  top: -1rem;
+  left: 1.5rem;
   text-align: center;
   color: #333;
-  font-size: 1.4rem;
+  font-size: 2rem;
   margin-bottom: 1.7rem;
   font-weight: bold;
   background-color: #a3a3a3;
-  padding: 0px 1em;
+  padding: 0rem 1em;
+  text-transform: uppercase;
+  box-shadow: 2px 2px 3px #3333339e;
+}
+section p {
+  margin-top: 2.5rem;
 }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
@@ -355,10 +413,19 @@ aside h2 {
   margin-bottom: 1em;
 }
 aside div {
+  position: relative;
   background-color: #e3e3e3;
   border: 1px solid #c3c3c3;
   margin-bottom: 1em;
   padding: 1em;
+}
+
+aside .fa-tag {
+  font-size: 4rem;
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  opacity: 0.1;
 }
 
 @media screen and (min-width: 1200px) {
