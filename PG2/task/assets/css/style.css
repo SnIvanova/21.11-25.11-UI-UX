@@ -477,7 +477,8 @@ footer a {
 
 @media print {
   body {
-    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
     padding: 0;
     background-image: none;
   }
@@ -500,7 +501,8 @@ footer a {
   aside,
   footer,
   .social,
-  .toTop {
+  .toTop,
+  .floating-icons, img {
     display: none;
   }
 }
