@@ -8,6 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
         behavior: 'smooth'
       });
     };
-  
+    window.addEventListener('scroll', function () {
+        if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
+          scrollButton.classList.add('pulse');
+        } else {
+          scrollButton.classList.remove('pulse');
+        }
+      });
+
+
   });
   

@@ -1,5 +1,9 @@
 /* IMPOSTAZIONI GENERALI */
-
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
 body {
   font-family: Poppins, "Helvetica Neue", sans-serif;
   line-height: 1.6;
@@ -60,7 +64,9 @@ a:hover {
   border: 3px solid white;
   color: #F7555D;
 }
-
+.fa-caret-square-up.pulse {
+  animation: pulse 1s infinite;
+ }
 
 @media screen and (min-width: 700px) {
   .floating-icons {
