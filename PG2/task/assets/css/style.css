@@ -520,7 +520,7 @@ footer a {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 15em;
+  width: 12em;
   background-color: rgb(43, 122, 123);
   color: #fff;
   text-align: center;
@@ -550,9 +550,11 @@ footer a {
   margin-bottom: 0.1em;
 }
 .calendar-day {
-  padding: 10px;
+  padding: 0.03em;
   text-align: center;
   border: 1px solid #fff;
+  border-radius: 4px;
+  margin: 0.03em;
 }
 .calendar-day.today {
   background-color: rgb(0, 255, 145); 
@@ -566,6 +568,22 @@ footer a {
 }
 
 @media screen and (max-width: 768px) {
+  .tooltip .tooltiptext { 
+    visibility: hidden;
+    width: 10em;
+    background-color: rgb(43, 122, 123);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: -200%;
+    right: 100%;
+    margin-right: 0.2em;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
   .calendar {
       grid-template-columns: repeat(7, 1fr);
   }
