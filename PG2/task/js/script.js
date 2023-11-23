@@ -17,8 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const generateCalendar = () => {
         let calendarHTML =  `<div class="calendar-month">${currentMonthName}</div><div class="calendar">`;
-        const today = new Date().getDate(); 
-                
+        const today = new Date().getDate();
+        const firstDayOfMonth = new Date(date.getFullYear(), date.getMonth(), 1).getDay(); 
+        const startingDay = firstDayOfMonth === 0 ? 7 : firstDayOfMonth;
+         
+        for(let i = 1; i < startingDay; i++) {
+            calendarHTML += `<div class="calendar-day empty"></div>`;
+        }
         for(let i = 1; i <= daysInMonth; i++) {
             let currentDate = new Date(date.getFullYear(), date.getMonth(), i);
             const dayClass = i === today ? 'calendar-day today' : currentDate.getDay() === 0 || currentDate.getDay() === 6 ? 'calendar-day weekend' : 'calendar-day';
