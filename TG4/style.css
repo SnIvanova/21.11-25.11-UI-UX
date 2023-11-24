@@ -15,8 +15,19 @@
     transform: translate3d( 50px, 50px, 50px);
     transform: rotateX(360deg);
     transform: rotateY(50deg);
-    transform: rotate(50deg);*/
+    transform: rotate(50deg);
     transform: rotate3d(1,1,1, 50deg);
+    transform: scaleX(2);
+    transform: scaleY(2);
+    transform: scale(2);
+    transform: scale3d(1.2, 1.2, 1.2);
+    transform: skew(25deg);*/
 
+    transition-property: width;
+    transition-duration: 2500ms;
+    transition-delay: 300ms;
+}
 
+.box1:hover {
+    width: 200px;
 }
