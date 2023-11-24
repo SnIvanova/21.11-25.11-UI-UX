@@ -1,5 +1,4 @@
-/*
-1 creazione del testo e formattazione di 1 parola da far ruotare
+/*1 creazione del testo e formattazione di 1 parola da far ruotare
 2 inserimento delle altre 2 parole
 3 sovrapporre le 3 parole
 4 mostrare 1 parola e nascondere le altre 2
@@ -7,4 +6,90 @@
 6 animare le altre 2 parole
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main {
+    padding-top: 2em;
+    padding-left: 3em;
+    text-align: left;
+    border: 2px solid #646464;
+    font-family: "Bree Serif", serif;
+    height: 8rem;
+    width: 25rem;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    align-items: center;
+}
+main:hover {
+    transform: scale(1.75);
+  }
+
+.parole {
+    position: absolute;
+    left: 5rem;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+#testoAlternato p {
+  margin-top: -3rem;
+}
+.parole i {
+    color: #7f96a4;
+    margin: 0 0.5rem;
+    opacity: 0;
+    animation: show 15s infinite;
+  }
+  .parole i:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .parole i:nth-child(2) {
+    animation-delay: 5s;
+    position: relative;
+    top: -1em;
+  }
+  
+  .parole i:nth-child(3) {
+    animation-delay: 10s;
+    position: relative;
+    top: -2em;
+  }
+  
+@keyframes show {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    5% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    30% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    35% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
 
